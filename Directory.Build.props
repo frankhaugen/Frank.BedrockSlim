@@ -4,6 +4,30 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
+
+    <OutputType>Library</OutputType>
+
+    <Description>BedrockSlim is a lightweight, high-performance, cross-platform networking library for .NET 8.0, that provides a TCP client and server with a simple API. Built on top of Kestrel, it provides a simple API for sending and receiving messages using TCP.</Description>
+    <PackageTags>Networking, TCP, TcpClient, Kestrel, Server, Client</PackageTags>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+
+    <Authors>Frank R. Haugen</Authors>
+    <PublisherName>Frank R. Haugen</PublisherName>
+    <Copyright>Copyright (c) 2023 Frank R. Haugen</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://www.github.com/frankhaugen/Frank.BedrockSlim</PackageProjectUrl>
+
+    <RepositoryUrl>https://www.github.com/frankhaugen/Frank.BedrockSlim</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
   
   <ItemGroup>

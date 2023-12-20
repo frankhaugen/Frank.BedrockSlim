@@ -1,4 +1,5 @@
 using System.Net;
+using System.Text;
 
 namespace Frank.BedrockSlim.Client.Sample;
 
@@ -19,8 +20,12 @@ public class Worker : BackgroundService
         {
             if (_logger.IsEnabled(LogLevel.Information))
             {
-                _logger.LogInformation("Worker running at: {Time}", DateTimeOffset.Now);
-                await _tcpClient.SendAsync(IPAddress.Loopback, 6667, "Hello World"u8.ToArray());
+                var response = await _tcpClient.SendAsync(IPAddress.Loopback, 6667, "Hello World"u8.ToArray());
+                
+                if (response.Length > 0)
+                {
+                    _logger.LogInformation("Received: {Response}", Encoding.UTF8.GetString(response.ToArray()));
+                }
             }
 
             await Task.Delay(1000, stoppingToken);
