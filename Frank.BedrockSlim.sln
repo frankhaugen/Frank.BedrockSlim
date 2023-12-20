@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CONTRIBUTING.md = CONTRIBUTING.md
 		Directory.Build.props = Directory.Build.props
 		icon.png = icon.png
+		run-samples.ps1 = run-samples.ps1
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Client.Sample", "Frank.BedrockSlim.Client.Sample\Frank.BedrockSlim.Client.Sample.csproj", "{BA1ED58E-5949-493B-8930-2E0A8E85A36B}"
