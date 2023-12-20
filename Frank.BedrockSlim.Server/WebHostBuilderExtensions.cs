@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Frank.BedrockSlim.Server;
 
-
 public static class WebHostBuilderExtensions
 {
     public static IWebHostBuilder UseTcpConnectionHandler<TProcessor>(this IWebHostBuilder builder, int port)

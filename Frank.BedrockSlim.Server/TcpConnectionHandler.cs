@@ -16,7 +16,7 @@ internal class TcpConnectionHandler : ConnectionHandler
 
 	public override async Task OnConnectedAsync(ConnectionContext connection)
 	{
-		_logger.LogDebug($"Connected: {connection.ConnectionId}");
+		_logger.LogDebug("Connected: {ConnectionId}", connection.ConnectionId);
 
 		while (true)
 		{
@@ -25,21 +25,17 @@ internal class TcpConnectionHandler : ConnectionHandler
 
 			foreach (var segment in buffer)
 			{
-				if (!segment.IsEmpty)
-				{
-					var responseBytes = await _processor.ProcessAsync(segment);
-					await connection.Transport.Output.WriteAsync(responseBytes);
-				}
+				if (segment.IsEmpty) continue;
+				var responseBytes = await _processor.ProcessAsync(segment);
+				await connection.Transport.Output.WriteAsync(responseBytes);
 			}
 
 			if (result.IsCompleted)
-			{
 				break;
-			}
 
 			connection.Transport.Input.AdvanceTo(buffer.End);
 		}
 
-		_logger.LogDebug($"Disconnected: {connection.ConnectionId}");
+		_logger.LogDebug("Disconnected: {ConnectionId}", connection.ConnectionId);
 	}
 }

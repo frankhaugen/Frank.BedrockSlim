@@ -4,10 +4,10 @@ namespace Frank.BedrockSlim.Server.Sample;
 
 public class MyCustomProcessor : IConnectionProcessor
 {
-    public async Task<byte[]> ProcessAsync(ReadOnlyMemory<byte> input)
+    public async Task<ReadOnlyMemory<byte>> ProcessAsync(ReadOnlyMemory<byte> input)
     {
         var stringInput = Encoding.UTF8.GetString(input.ToArray());
         Console.WriteLine($"Received: {stringInput}");
-        return "OK"u8.ToArray();
+        return new ReadOnlyMemory<byte>("OK"u8.ToArray());
     }
 }

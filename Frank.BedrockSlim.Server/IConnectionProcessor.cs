@@ -2,5 +2,5 @@ namespace Frank.BedrockSlim.Server;
 
 public interface IConnectionProcessor
 {
-    Task<byte[]> ProcessAsync(ReadOnlyMemory<byte> input);
+    Task<ReadOnlyMemory<byte>> ProcessAsync(ReadOnlyMemory<byte> input);
 }
