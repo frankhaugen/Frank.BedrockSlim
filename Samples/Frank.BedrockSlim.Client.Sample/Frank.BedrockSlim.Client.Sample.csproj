@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Frank.BedrockSlim.Client\Frank.BedrockSlim.Client.csproj" />
+    </ItemGroup>
+    
+</Project>

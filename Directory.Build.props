@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
 
     <Description>BedrockSlim is a lightweight, high-performance, cross-platform networking library for .NET 8.0, that provides a TCP client and server with a simple API. Built on top of Kestrel, it provides a simple API for sending and receiving messages using TCP.</Description>
-    <PackageTags>Networking, TCP, TcpClient, Kestrel, Server, Client</PackageTags>
+    <PackageTags>Networking, TCP, TcpClient, Kestrel, Server, Client, Cross-Platform, dotnet, any, port, listen, connect, send, receive, message, messages, stream, streams, socket, sockets, async, await, awaitable, frank, haugen, bedrock, slim, frankhaugen</PackageTags>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
@@ -19,7 +19,7 @@
 
     <Authors>Frank R. Haugen</Authors>
     <PublisherName>Frank R. Haugen</PublisherName>
-    <Copyright>Copyright (c) 2023 Frank R. Haugen</Copyright>
+    <Copyright>Copyright (c) 2024 Frank R. Haugen</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -29,19 +29,12 @@
     <RepositoryUrl>https://www.github.com/frankhaugen/Frank.BedrockSlim</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
-  </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
     <None Include="../README.md" Pack="true" PackagePath="\"/>
     <None Include="../icon.png" Pack="true" PackagePath="\"/>
-  </ItemGroup>
-  
-  <ItemGroup>
-    <InternalsVisibleTo Include="Frank.BedrockSlim.Tests" />
+    <InternalsVisibleTo Include="$(AssemblyName).Tests"/>
     <InternalsVisibleTo Include="LINQPadQuery"/>
   </ItemGroup>
 </Project>
-

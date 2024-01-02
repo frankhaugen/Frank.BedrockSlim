@@ -15,6 +15,6 @@ public class MyCustomProcessor : IConnectionProcessor
     {
         var stringInput = Encoding.UTF8.GetString(input.ToArray());
         _logger.LogInformation("Received: {Input}", stringInput);
-        return new ReadOnlyMemory<byte>("OK"u8.ToArray());
+        return await Task.FromResult(Encoding.UTF8.GetBytes($"Echo: {stringInput}"));
     }
 }

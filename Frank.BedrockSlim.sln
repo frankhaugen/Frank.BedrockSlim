@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Server", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Client", "Frank.BedrockSlim.Client\Frank.BedrockSlim.Client.csproj", "{88C94D07-BC1F-4B54-8A70-5B9D24199F57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Server.Sample", "Frank.BedrockSlim.Server.Sample\Frank.BedrockSlim.Server.Sample.csproj", "{2DD5D85D-FC54-49D4-9E59-D267A2C68AE2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38CC1509-935D-4EAD-A1D8-9B2F228BF3C2}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -17,12 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CONTRIBUTING.md = CONTRIBUTING.md
 		Directory.Build.props = Directory.Build.props
 		icon.png = icon.png
-		run-samples.ps1 = run-samples.ps1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Client.Sample", "Frank.BedrockSlim.Client.Sample\Frank.BedrockSlim.Client.Sample.csproj", "{BA1ED58E-5949-493B-8930-2E0A8E85A36B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Tests", "Frank.BedrockSlim.Tests\Frank.BedrockSlim.Tests.csproj", "{2FEFF9A8-8418-4A26-B1C3-2E32BBBF464B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{3DB1FB24-F7BE-4C8F-AFB7-08DD15C45002}"
+	ProjectSection(SolutionItems) = preProject
+		Samples\Directory.Build.props = Samples\Directory.Build.props
+		Samples\run-samples.ps1 = Samples\run-samples.ps1
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Client.Sample", "Samples\Frank.BedrockSlim.Client.Sample\Frank.BedrockSlim.Client.Sample.csproj", "{1B107BD4-E138-4437-A0D1-1684920B0F5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Server.Sample", "Samples\Frank.BedrockSlim.Server.Sample\Frank.BedrockSlim.Server.Sample.csproj", "{6436E09C-2DBB-4101-836A-DF534211C995}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,17 +46,21 @@ Global
 		{88C94D07-BC1F-4B54-8A70-5B9D24199F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88C94D07-BC1F-4B54-8A70-5B9D24199F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88C94D07-BC1F-4B54-8A70-5B9D24199F57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2DD5D85D-FC54-49D4-9E59-D267A2C68AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DD5D85D-FC54-49D4-9E59-D267A2C68AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DD5D85D-FC54-49D4-9E59-D267A2C68AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DD5D85D-FC54-49D4-9E59-D267A2C68AE2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA1ED58E-5949-493B-8930-2E0A8E85A36B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA1ED58E-5949-493B-8930-2E0A8E85A36B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA1ED58E-5949-493B-8930-2E0A8E85A36B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA1ED58E-5949-493B-8930-2E0A8E85A36B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2FEFF9A8-8418-4A26-B1C3-2E32BBBF464B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2FEFF9A8-8418-4A26-B1C3-2E32BBBF464B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FEFF9A8-8418-4A26-B1C3-2E32BBBF464B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FEFF9A8-8418-4A26-B1C3-2E32BBBF464B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B107BD4-E138-4437-A0D1-1684920B0F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B107BD4-E138-4437-A0D1-1684920B0F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B107BD4-E138-4437-A0D1-1684920B0F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B107BD4-E138-4437-A0D1-1684920B0F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6436E09C-2DBB-4101-836A-DF534211C995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6436E09C-2DBB-4101-836A-DF534211C995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6436E09C-2DBB-4101-836A-DF534211C995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6436E09C-2DBB-4101-836A-DF534211C995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B107BD4-E138-4437-A0D1-1684920B0F5B} = {3DB1FB24-F7BE-4C8F-AFB7-08DD15C45002}
+		{6436E09C-2DBB-4101-836A-DF534211C995} = {3DB1FB24-F7BE-4C8F-AFB7-08DD15C45002}
 	EndGlobalSection
 EndGlobal
