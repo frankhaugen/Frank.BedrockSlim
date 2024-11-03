@@ -1,3 +1,4 @@
+using Frank.BedrockSlim.Cryptography;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Frank.BedrockSlim.Client;
@@ -14,6 +15,7 @@ public static class ServiceCollectionExtensions
     {
         services.Configure(configure);
         services.AddSingleton<ITcpClient, TcpClient>();
+        services.AddAdvancedEncryption();
         return services;
     }
     
@@ -25,6 +27,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddTcpClient(this IServiceCollection services)
     {
         services.AddSingleton<ITcpClient, TcpClient>();
+        services.AddAdvancedEncryption();
         return services;
     }
 }

@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Client.Sa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Server.Sample", "Samples\Frank.BedrockSlim.Server.Sample\Frank.BedrockSlim.Server.Sample.csproj", "{6436E09C-2DBB-4101-836A-DF534211C995}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.BedrockSlim.Cryptography", "Frank.BedrockSlim.Cryptography\Frank.BedrockSlim.Cryptography.csproj", "{1838B72A-290F-475E-81A8-58CA85971A0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{6436E09C-2DBB-4101-836A-DF534211C995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6436E09C-2DBB-4101-836A-DF534211C995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6436E09C-2DBB-4101-836A-DF534211C995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1838B72A-290F-475E-81A8-58CA85971A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1838B72A-290F-475E-81A8-58CA85971A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1838B72A-290F-475E-81A8-58CA85971A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1838B72A-290F-475E-81A8-58CA85971A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1B107BD4-E138-4437-A0D1-1684920B0F5B} = {3DB1FB24-F7BE-4C8F-AFB7-08DD15C45002}

@@ -3,7 +3,29 @@ ___
 The purpose of this project is to provide a starting point for building a web application using the Bedrock Framework. It is intended to be used as a starting point for building servers and clients, using minimal dependencies, and providing a simple, consistent, and easy to use API.
 
 ASP.NET Core is the core of this library, but very little of the actual "basics" are added, so its only providing "server infrastructure" and "client infrastructure" for the most part. The rest is up to you.
+
 ___
+
+![Nuget](https://img.shields.io/nuget/v/Frank.BedrockSlim.Server?label=Server&style=for-the-badge)
+![Nuget](https://img.shields.io/nuget/v/Frank.BedrockSlim.Client?label=Client&style=for-the-badge)
+
+![Nuget](https://img.shields.io/nuget/dt/Frank.BedrockSlim.Server?label=Server&style=for-the-badge)
+![Nuget](https://img.shields.io/nuget/dt/Frank.BedrockSlim.Client?label=Client&style=for-the-badge)
+
+
+
+___
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Installing](#installing)
+  - [Sample Projects](#sample-projects)
+  - [Server](#server)
+  - [Client](#client)
+  - [Lack of Tests](#lack-of-tests)
+
+___
+
 ## Getting Started
 
 ### Installing

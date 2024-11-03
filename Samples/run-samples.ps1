@@ -14,7 +14,7 @@ Start-Sleep -Seconds 5
 Start-Process -FilePath dotnet -ArgumentList "run --project .\Frank.BedrockSlim.Client.Sample\Frank.BedrockSlim.Client.Sample.csproj" -WindowStyle Normal
 
 # Wait for the client to finish
-Start-Sleep -Seconds 15
+Start-Sleep -Seconds 60
 
 # Kill the client then the server
 Stop-Process -Name Frank.BedrockSlim.Client.Sample

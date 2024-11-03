@@ -6,12 +6,12 @@ namespace Frank.BedrockSlim.Server;
 internal class TcpConnectionHandler : ConnectionHandler
 {
 	private readonly ILogger<TcpConnectionHandler> _logger;
-	private readonly IConnectionProcessor _processor;
+	private readonly IConnectionHandler _connectionHandler;
 
-	public TcpConnectionHandler(ILogger<TcpConnectionHandler> logger, IConnectionProcessor processor)
+	public TcpConnectionHandler(ILogger<TcpConnectionHandler> logger, IConnectionHandler connectionHandler)
 	{
 		_logger = logger;
-		_processor = processor;
+		_connectionHandler = connectionHandler;
 	}
 
 	public override async Task OnConnectedAsync(ConnectionContext connection)
@@ -26,7 +26,7 @@ internal class TcpConnectionHandler : ConnectionHandler
 			foreach (var segment in buffer)
 			{
 				if (segment.IsEmpty) continue;
-				var responseBytes = await _processor.ProcessAsync(segment);
+				var responseBytes = await _connectionHandler.HandleAsync(segment);
 				await connection.Transport.Output.WriteAsync(responseBytes);
 			}
 
