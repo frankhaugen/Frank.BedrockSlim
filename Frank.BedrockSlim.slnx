@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/Samples/">
+    <File Path="Samples/Directory.Build.props" />
+    <File Path="Samples/run-samples.ps1" />
+    <Project Path="Samples/Frank.BedrockSlim.Client.Sample/Frank.BedrockSlim.Client.Sample.csproj" />
+    <Project Path="Samples/Frank.BedrockSlim.Server.Sample/Frank.BedrockSlim.Server.Sample.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="AGENTS.md" />
+    <File Path=".gitignore" />
+    <File Path="CONTRIBUTING.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="global.json" />
+    <File Path="icon.png" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Frank.BedrockSlim.Client/Frank.BedrockSlim.Client.csproj" />
+  <Project Path="Frank.BedrockSlim.Cryptography/Frank.BedrockSlim.Cryptography.csproj" />
+  <Project Path="Frank.BedrockSlim.Server/Frank.BedrockSlim.Server.csproj" />
+  <Project Path="Frank.BedrockSlim.Tests/Frank.BedrockSlim.Tests.csproj" />
+</Solution>

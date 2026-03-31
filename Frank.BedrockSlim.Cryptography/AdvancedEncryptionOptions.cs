@@ -1,7 +1,8 @@
-﻿using System.Text;
+using System.Text;
 
 namespace Frank.BedrockSlim.Cryptography;
 
+/// <summary>Key material for AES helpers. Built-in defaults are for local development only.</summary>
 public class AdvancedEncryptionOptions
 {
     public string Key { get; set; } = "puDUtQJOf5UBY0iI0PwKStlBeHBEn123"; // 32 bytes, 256 bits, Should be changed

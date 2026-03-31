@@ -1,13 +1,16 @@
 <Project>
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
 
     <OutputType>Library</OutputType>
 
-    <Description>BedrockSlim is a lightweight, high-performance, cross-platform networking library for .NET 8.0, that provides a TCP client and server with a simple API. Built on top of Kestrel, it provides a simple API for sending and receiving messages using TCP.</Description>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>moderate</NuGetAuditLevel>
+
+    <Description>BedrockSlim is a lightweight, high-performance, cross-platform networking library for .NET 10, that provides a TCP client and server with a simple API. Built on top of Kestrel, it provides a simple API for sending and receiving messages using TCP.</Description>
     <PackageTags>Networking, TCP, TcpClient, Kestrel, Server, Client, Cross-Platform, dotnet, any, port, listen, connect, send, receive, message, messages, stream, streams, socket, sockets, async, await, awaitable, frank, haugen, bedrock, slim, frankhaugen</PackageTags>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -19,7 +22,7 @@
 
     <Authors>Frank R. Haugen</Authors>
     <PublisherName>Frank R. Haugen</PublisherName>
-    <Copyright>Copyright (c) 2024 Frank R. Haugen</Copyright>
+    <Copyright>Copyright (c) 2024–2026 Frank R. Haugen</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -31,11 +34,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="All"/>
     <None Include="../README.md" Pack="true" PackagePath="\" Condition="!Exists('README.md')"/>
     <None Include="README.md" Pack="true" PackagePath="\" Condition="Exists('README.md')"/>
     <None Include="../icon.png" Pack="true" PackagePath="\" Condition="!Exists('icon.png')"/>
     <InternalsVisibleTo Include="$(AssemblyName).Tests"/>
     <InternalsVisibleTo Include="LINQPadQuery"/>
   </ItemGroup>
+
+  <PropertyGroup Label="Build quality">
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);CS1711</NoWarn>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+  <PropertyGroup Label="Artifacts">
+    <UseArtifactsOutput>true</UseArtifactsOutput>
+    <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Continuous integration" Condition="'$(CI)' == 'true' Or '$(GITHUB_ACTIONS)' == 'true' Or '$(TF_BUILD)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
 </Project>

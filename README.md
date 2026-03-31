@@ -22,7 +22,7 @@ ___
   - [Sample Projects](#sample-projects)
   - [Server](#server)
   - [Client](#client)
-  - [Lack of Tests](#lack-of-tests)
+  - [Tests](#tests)
 
 ___
 
@@ -41,10 +41,10 @@ dotnet add package Frank.BedrockSlim.Client
 
 There are two sample projects included in this repository, one for the server, and one for the client. They are both console applications, and can be used to test the library.
 
-To run the sample projects, just run the following commands run the 'run-samples.ps1' script:
+To run the sample projects, run the `run-samples.ps1` script from the repository root:
 
 ```bash
-pwsh ./run-samples.ps1
+pwsh ./Samples/run-samples.ps1
 ```
 
 The script will build the library, and then run the server saple project and wait 5 seconds before running the client sample project, then close them after 15 seconds.
@@ -138,9 +138,15 @@ public class Worker : BackgroundService
 ```
 ___
 
-## Lack of Tests
+## Tests
 
-Except for the sample projects, there are no tests. This is because theres very little to test. The XUnit project is there to make it easy to start testing, but the actual test cases are not very clear at this time.
+The `Frank.BedrockSlim.Tests` project uses xUnit. Run:
+
+```bash
+dotnet test Frank.BedrockSlim.slnx
+```
+
+Coverage is intentionally small; add tests when you extend behavior.
 ___
 ## Contributing
 
