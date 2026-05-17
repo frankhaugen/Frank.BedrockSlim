@@ -1,3 +1,5 @@
+> **Moved to Novolis:** This library is superseded by [\`Novolis.Transports.Tcp.Server\`](https://www.nuget.org/packages/Novolis.Transports.Tcp.Server) (see also `Novolis.Transports.Tcp.Client`) from [novolis-transports](https://github.com/Novolis-Platform/novolis-transports). This repository is archived; do not add features here.
+
 # Frank.BedrockSlim
 ___
 The purpose of this project is to provide a starting point for building a web application using the Bedrock Framework. It is intended to be used as a starting point for building servers and clients, using minimal dependencies, and providing a simple, consistent, and easy to use API.
